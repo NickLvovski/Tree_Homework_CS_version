@@ -12,9 +12,7 @@ namespace Algo_for_Anton.SLAYYYTER
             BinaryTree treeA = new BinaryTree();
 
             foreach (int value in values)
-            {
                 treeB.InsertNode(value);
-            }
             traversal.fillTreeA(treeB.RootNode, treeA); // заполнение дерева A
             Console.WriteLine("Прямой обход дерева A:");
             traversal.preOrder(treeA.RootNode);

@@ -13,17 +13,11 @@ namespace Algo_for_Anton.SLAYYYTER
             while (currentNode.Value != value)
             {
                 if (value < currentNode.Value)
-                {
                     currentNode = currentNode.LeftChild;
-                }
                 else
-                {
                     currentNode = currentNode.RightChild;
-                }
                 if (currentNode == null)
-                {
                     return null;
-                }
             }
             return currentNode;
         }
@@ -35,9 +29,7 @@ namespace Algo_for_Anton.SLAYYYTER
             Node newNode = new Node(value);
 
             if (RootNode == null)
-            {
                 RootNode = newNode;
-            }
             else
             {
                 Node currentNode = RootNode;
@@ -95,26 +87,18 @@ namespace Algo_for_Anton.SLAYYYTER
                     currentNode = currentNode.RightChild;
                 }
                 if (currentNode == null)
-                {
                     return;
-                }
             }
 
             if (currentNode.LeftChild == null && currentNode.RightChild == null)
             {
                 // если у узла нет потомков, то спокойно удаляем его.
                 if (currentNode == RootNode)
-                {
                     RootNode = null;
-                }
                 else if (isLeft)
-                {
                     parentNode.LeftChild = null;
-                }
                 else
-                {
                     parentNode.RightChild = null;
-                }
             }
             else if (currentNode.RightChild == null)
             {
